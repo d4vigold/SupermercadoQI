@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(to right, #ff0000, #ffffff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.linha{
+    display: flex;
+	flex-wrap: wrap;
+}
+.coluna{
+    flex: 32%;
+	max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    margin: 102px;
+}
+.textbalao{
+    font-size: 60px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.bbonito{
+    border-color: black;
+    border-width: 3px;
+    font-size: 30px;
+    text-shadow: 2px 2px 3px white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    width: 50%;
+    height: 75px;
+    border-radius: 30px;
+}
+.subtextos{
+    margin: 5px 0;
+}
+.btnregistroprod{
+    width: 300px;
+    height: 60px;
+    font-size: large;
+    color: white;
+    background-color: #2a9d8f;
+    border-radius: 25px;
+    border: 0;
+    text-decoration: none;
+    font-weight: bold;
+}

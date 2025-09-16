@@ -1,0 +1,130 @@
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+/* Cabeçalho */
+header {
+  background-color: #c40000;
+  color: white;
+  padding: 15px;
+  margin-bottom: 40px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo span {
+  color: #fff;
+  background-color: #900;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    margin-left: 15px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+.nav-links a:hover {
+    background-color: #900;
+    border-radius: 5px;
+}
+
+/* Estilos para o botão de menu (hamburger) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.linkini{
+    padding-left: 60px;
+    font-size: 18px;
+}
+/* Responsividade para telas menores */
+@media screen and (max-width: 850px) {
+    .nav-links {
+        position: fixed; /* Fixa o menu na tela, mesmo durante o scroll */
+        top: 0;
+        right: -100%;
+        width: 90%;
+        height: 100vh;
+        background-image: linear-gradient(to right, #868686e7, #1a1919dc);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.5s ease;
+        z-index: 1000; /* Certifica que o menu ficará sobre os outros elementos */
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1100; /* Para garantir que o ícone também esteja sobreposto */
+    }
+}
+@media screen and (max-width: 1000px){
+    .logo{
+        float: left;
+        font-size: 1.1em;
+        font-weight: bold; 
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        text-shadow: 2px 2px 3px black, 3px 3px 2px blue; 
+    }
+    .logo img{
+        width: 70px;
+        height: 70px;
+    }
+    .nav-links li {
+        margin-left: 8px;
+    }
+}
+@media screen and (max-width: 600px){
+    .logo{
+        font-size: 1.1em;
+    }
+    .logo img{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen and (max-width: 400px){
+    .logo{
+        font-size: 0.9em;
+    }
+    .logo img{
+        width: 70px;
+        height: 70px;
+    }
+}

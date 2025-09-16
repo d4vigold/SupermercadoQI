@@ -1,0 +1,68 @@
+body 
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #ff0000, #ffffff);
+        }
+
+        .container 
+        {
+            width: 400px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            text-align: center;
+        }
+
+        .logo 
+        {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        h2 
+        {
+            color: #d90000;
+        }
+
+        label 
+        {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="password"] 
+        {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] 
+        {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #d90000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover 
+        {
+            background-color: #b30000;
+        }
