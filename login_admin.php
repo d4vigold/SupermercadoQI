@@ -26,18 +26,22 @@
 <div class="centralizar">
   <div class="login-container">
     <h1>Supermercado QI</h1> 
-    <form>
+    <form onsubmit="redirecionar(); return false;">
       <img src ="assets/2qi_imagem.jpg" alt="imagem do supermercado" style="position: middle; width: 200px; height: 200px;"/>
       
       <h1> Login administrativo </h1>
       
       <input type="text" placeholder="Usuário" required><br>
       <input type="password" placeholder="Senha" required><br>
+      <button type="submit">Entrar</button>
     </form>
-      <a href="admi.php"><button>Entrar</button></a>
-    
-    
-  </div>
-  
+  </div> 
+</div>
+
+  <script>
+    function redirecionar() {
+      window.location.href = "admi.php";
+    }
+  </script>
 </body>
 </html>

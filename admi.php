@@ -13,7 +13,7 @@
     <nav>
       <ul>
         <li><a href="index.php">Início</a></li>
-        <li><a href="registrarProdutos.php">Gerenciar Produtos</a></li>
+        <li><a href="registroProdutos.php">Gerenciar Produtos</a></li>
         <li><a href="#">Gerenciar Usuários</a></li>
         <li><a href="#">Relatórios</a></li>
       </ul>
