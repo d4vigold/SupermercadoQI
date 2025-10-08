@@ -1,0 +1,108 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-principal {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Container que alinha os cards */
+.container-produtos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os cards */
+    gap: 25px; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* O Card do Produto */
+.card-produto {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    overflow: hidden; /* Garante que a imagem não "vaze" das bordas arredondadas */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Imagem do Card */
+.card-imagem {
+    width: 100%;
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+/* Conteúdo de texto do card */
+.card-conteudo {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço disponível */
+}
+
+.card-titulo {
+    font-size: 1.25em;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.card-categoria {
+    font-size: 0.8em;
+    color: #888;
+    background-color: #e9e9f5;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin: 0 0 10px 0;
+    align-self: flex-start; /* Faz o background se ajustar ao texto */
+}
+
+.card-descricao {
+    font-size: 0.9em;
+    color: #666;
+    flex-grow: 1; /* Empurra o rodapé para baixo */
+    margin-bottom: 15px;
+}
+
+/* Rodapé do card (preço e botão) */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.card-preco {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Botão de Comprar */
+.btn-comprar {
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #2980b9;
+}

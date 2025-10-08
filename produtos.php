@@ -1,13 +1,22 @@
+<?php
+// Inclui a classe DAO
+require_once 'src/ProdutoDAO.php';
+
+// Cria uma instância do DAO e busca os produtos
+$produtoDAO = new ProdutoDAO();
+$listaDeProdutos = $produtoDAO->listarTodosProdutos();
+?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produtos - Mercado</title>
-  <link rel="stylesheet" href="css/davi.css">
-  <link rel="stylesheet" href="css/nav.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Supermercado QI</title>
+    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
+
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -16,7 +25,6 @@
             <ul class="nav-links">
                 <li><a href="index.php" class="linkini">Início</a></li>
                 <li><a href="produtos.php" class="linkini">Produtos</a></li>
-                <li><a href="#" class="linkini">Contato</a></li>
                 <li><a href="login.php" class="linkini">Login</a></li>
                 <li><a href="cadastro.php" class="linkini">Cadastro</a></li>
             </ul>
@@ -24,32 +32,31 @@
         </nav>
     </header>
 
-        <section class="linha">
-			<div class="coluna">
-                <h1 class="textbalao">Produto</h1>
-                <p class="subtextos">R$ Preço</p>
-                <p class="subtextos">Descrição</p>
-                <p class="subtextos">Categoria</p>
-                <p class="subtextos">Estoque</p>
-                <a href="" style="color: black;"><button class="bbonito" id="bronze">Comprar</button></a>
+    <h1 class="titulo-principal">Confira Nossos Produtos</h1>
+
+    <main class="container-produtos">
+        
+        <?php foreach ($listaDeProdutos as $produto): ?>
+            <div class="card-produto">
+                <div class="card-conteudo">
+                    <h3 class="card-titulo"><?= htmlspecialchars($produto['nome']) ?></h3>
+                    <p class="card-categoria"><?= htmlspecialchars($produto['categoria']) ?></p>
+                    <p class="card-descricao"><?= htmlspecialchars($produto['descricao']) ?></p>
+                    <div class="card-footer">
+                        <span class="card-preco">
+                            R$ <?= number_format($produto['preco'], 2, ',', '.') ?>
+                        </span>
+                        <a class="btn-comprar">Comprar</a>
+                    </div>
+                </div>
             </div>
-            <div class="coluna">
-                <h1 class="textbalao">Produto</h1>
-                <p class="subtextos">R$ Preço</p>
-                <p class="subtextos">Descrição</p>
-                <p class="subtextos">Categoria</p>
-                <p class="subtextos">Estoque</p>
-                <a href="" style="color: black;"><button class="bbonito" id="prata">Comprar</button></a>
-            </div>
-            <div class="coluna">
-                <h1 class="textbalao">Produto</h1>
-                <p class="subtextos">R$ Preço</p>
-                <p class="subtextos">Descrição</p>
-                <p class="subtextos">Categoria</p>
-                <p class="subtextos">Estoque</p>
-                <a href="" style="color: black;"><button class="bbonito" id="ouro">Comprar</button></a>
-            </div>
-        </section>
-    <a href="registroProdutos.php"><button class="btnregistroprod">Adicionar Produtos</button></a>
+        <?php endforeach; ?>
+
+        <?php if (empty($listaDeProdutos)): ?>
+            <p>Nenhum produto encontrado no momento.</p>
+        <?php endif; ?>
+
+    </main>
+
 </body>
 </html>

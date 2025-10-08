@@ -11,6 +11,44 @@ body {
   color: #333;
 }
 
+/* Cabeçalho */
+header {
+  background-color: #c40000;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #fff;
+  background-color: #900;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 /* Banner */
 .banner {
   background-color: #f8d7da;
